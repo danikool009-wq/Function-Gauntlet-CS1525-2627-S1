@@ -1,4 +1,3 @@
-from pdb import test
 
 
 def is_even(number):
@@ -21,7 +20,8 @@ def count_vowels(text):
     :return:
     """
     num_value =0
-    for i in len(text):
+    n =0
+    for i in range (len(text)):
         if text[i].lower() == "a" or text[i].lower() == "e" or text[i].lower() == "i" or  text[i].lower() == "o" or   text[i].lower() == "u":
             num_value += 1
             return num_value
@@ -46,9 +46,10 @@ def reverse_text(text):
     :param text:
     :return:
     """
+    textV1 = ""
     for i in len(text):
         text [i] = text[len(text)-i]
-
+    textV1
 
 
 def larger_number(a, b):
@@ -59,10 +60,12 @@ def larger_number(a, b):
     :param b:
     :return:
     """
-    if a>b:
-        return a
-    elif b>a:
+    if a<b:
         return b
+    elif b<a:
+        return a
+    else:
+        return a
 
 
 def average_two(a, b):
@@ -99,7 +102,7 @@ def repeat_text(text, times):
     :param times:
     :return:
     """
-    new_text= text *int
+    new_text= text *int(times)
     return new_text
 
 
@@ -112,9 +115,9 @@ def contains_word(sentence, word):
     :return:
     """
     if sentence.find(word) == -1:
-        return True
-    else:
         return False
+    else:
+        return True
 
 def calculate_tip(cost, percent):
     """Calculate and return the amount of tip.
@@ -140,7 +143,7 @@ def make_initials(first_name, last_name):
     :param last_name:
     :return:
     """
-    return first_name[0].upper(), last_name[0].upper()
+    return first_name[0].upper() + last_name[0].upper()
 
 
 def percent_score(points, possible):
@@ -167,8 +170,10 @@ def is_between(number, minimum, maximum):
     :param maximum:
     :return:
     """
-    if number > minimum and number < maximum:
+    if number >= minimum and number <= maximum:
         return True
+    else:
+        return False
 
 
 def all_different(a, b, c):
@@ -181,7 +186,7 @@ def all_different(a, b, c):
     :param c:
     :return:
     """
-    if a == b == c:
+    if a != b != c:
         return False
     else:
         return True
@@ -224,5 +229,5 @@ if __name__ == "__main__":
     Additionally, there is a test file loaded into
     this folder that you can run a test on your code.
     """
-
+    pass
 
