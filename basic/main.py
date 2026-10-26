@@ -1,10 +1,16 @@
+from pdb import test
+
+
 def is_even(number):
     """ Return True if number is even and False if it is odd.
 
     :param number:
     :return:
     """
-    pass
+    if number % 2 == 0:
+        return True
+    else:
+        return False
 
 
 def count_vowels(text):
@@ -14,7 +20,11 @@ def count_vowels(text):
     :param text:
     :return:
     """
-    pass
+    num_value =0
+    for i in len(text):
+        if text[i].lower() == "a" or text[i].lower() == "e" or text[i].lower() == "i" or  text[i].lower() == "o" or   text[i].lower() == "u":
+            num_value += 1
+            return num_value
 
 
 def celsius_to_fahrenheit(celsius):
@@ -23,7 +33,8 @@ def celsius_to_fahrenheit(celsius):
     :param celsius:
     :return:
     """
-    pass
+    fahrenheit = celsius * 1.8 + 32
+    return fahrenheit
 
 
 def reverse_text(text):
@@ -35,7 +46,9 @@ def reverse_text(text):
     :param text:
     :return:
     """
-    pass
+    for i in len(text):
+        text [i] = text[len(text)-i]
+
 
 
 def larger_number(a, b):
@@ -46,7 +59,10 @@ def larger_number(a, b):
     :param b:
     :return:
     """
-    pass
+    if a>b:
+        return a
+    elif b>a:
+        return b
 
 
 def average_two(a, b):
@@ -56,8 +72,8 @@ def average_two(a, b):
     :param b:
     :return:
     """
-    pass
-
+    average = (a+b)/2
+    return average
 
 def can_afford(balance, cost):
     """Return True if balance is greater than or equal to cost.
@@ -67,8 +83,10 @@ def can_afford(balance, cost):
     :param cost:
     :return:
     """
-    pass
-
+    if balance >= cost:
+        return True
+    else:
+        return False
 
 def repeat_text(text, times):
     """Return one string containing text repeated the given
@@ -81,7 +99,8 @@ def repeat_text(text, times):
     :param times:
     :return:
     """
-    pass
+    new_text= text *int
+    return new_text
 
 
 def contains_word(sentence, word):
@@ -92,8 +111,10 @@ def contains_word(sentence, word):
     :param word:
     :return:
     """
-    pass
-
+    if sentence.find(word) == -1:
+        return True
+    else:
+        return False
 
 def calculate_tip(cost, percent):
     """Calculate and return the amount of tip.
@@ -105,7 +126,8 @@ def calculate_tip(cost, percent):
     :param percent:
     :return:
     """
-    pass
+    tips = cost * (percent/100)
+    return tips
 
 
 def make_initials(first_name, last_name):
@@ -118,7 +140,7 @@ def make_initials(first_name, last_name):
     :param last_name:
     :return:
     """
-    pass
+    return first_name[0].upper(), last_name[0].upper()
 
 
 def percent_score(points, possible):
@@ -132,7 +154,8 @@ def percent_score(points, possible):
     :param possible:
     :return:
     """
-    pass
+    percent = (points/possible) * 100
+    return percent
 
 
 def is_between(number, minimum, maximum):
@@ -144,7 +167,8 @@ def is_between(number, minimum, maximum):
     :param maximum:
     :return:
     """
-    pass
+    if number > minimum and number < maximum:
+        return True
 
 
 def all_different(a, b, c):
@@ -157,7 +181,11 @@ def all_different(a, b, c):
     :param c:
     :return:
     """
-    pass
+    if a == b == c:
+        return False
+    else:
+        return True
+
 
 
 def average_three(a, b, c):
@@ -168,8 +196,8 @@ def average_three(a, b, c):
     :param c:
     :return:
     """
-    pass
 
+    return average_three(a+b+c)/3
 
 def describe_temperature(temperature, cold_limit, hot_limit):
     """Returns a string describing the temperature.
@@ -182,7 +210,12 @@ def describe_temperature(temperature, cold_limit, hot_limit):
     :param hot_limit:
     :return:
     """
-    pass
+    if temperature < cold_limit:
+        return "cold"
+    elif temperature > hot_limit:
+        return "hot"
+    else:
+        return"comfy"
 
 if __name__ == "__main__":
     """
@@ -191,5 +224,5 @@ if __name__ == "__main__":
     Additionally, there is a test file loaded into
     this folder that you can run a test on your code.
     """
-    pass
+
 
